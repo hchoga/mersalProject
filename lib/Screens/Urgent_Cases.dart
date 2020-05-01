@@ -41,7 +41,7 @@ class PatientExtract extends StatelessWidget {
       percentage: 44,
       per: 44,
       imageUrl:
-      'https://image.shutterstock.com/image-vector/homeless-shaggy-man-dirty-rags-260nw-353668232.jpg',
+      'Images/homless.webp',
     ),
     Product(
       id: '2',
@@ -49,7 +49,7 @@ class PatientExtract extends StatelessWidget {
       percentage: 50,
       per: 50,
       imageUrl:
-      'https://image.shutterstock.com/image-vector/volunteer-giving-food-homeless-man-600w-468877370.jpg',
+      'Images/hungry.webp',
     ),
     Product(
       id: '3',
@@ -57,7 +57,7 @@ class PatientExtract extends StatelessWidget {
       percentage: 53,
       per: 53,
       imageUrl:
-      'https://image.shutterstock.com/image-vector/beggar-600w-186670688.jpg',
+      'Images/poor.jpg',
     ),
     Product(
       id: '4',
@@ -65,7 +65,7 @@ class PatientExtract extends StatelessWidget {
       percentage: 47,
       per: 47,
       imageUrl:
-      'https://steemitimages.com/640x0/https://steemitimages.com/DQmRtTWasAs38BeMgtqrDJwXRs4wTZvhHBQ9vYXqj1EuCp9/photo%2002.jpg',
+      'Images/volunt.webp',
     ),
   ];
 
@@ -96,7 +96,7 @@ class PatientExtract extends StatelessWidget {
                         width: imageWidth,
                         child: AspectRatio(
                           aspectRatio: 8 / 10,
-                          child: Image.network(
+                          child: Image.asset(
                             loadedProduct[i].imageUrl,
                             fit: BoxFit.fill,
                             height: 180,

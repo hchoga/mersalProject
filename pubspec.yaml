@@ -32,6 +32,8 @@ dependencies:
   shared_preferences: ^0.5.7
   app_review: ^1.1.0+1
   flutter_launcher_icons: ^0.7.5
+  flutter_svg: ^0.17.0
+  url_launcher: ^5.4.11
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -69,6 +71,7 @@ flutter:
   - Images/donors.png
   - Images/projects.png
   - Images/talkkkkkkk.jpg
+  - Images/blanket.jpg
   - Images/chartiable.png
   - Images/donatee.png
   - Images/home.png
@@ -92,6 +95,9 @@ flutter:
   - Images/lang.png
   - Images/logout.png
   - Images/akhbar.png
+  - Images/mersal.jpg
+  - Images/settings/edit.png
+  - Images/nav_icons/sms2.png
 
 
 

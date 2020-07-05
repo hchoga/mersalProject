@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:mersal/Screens/Navigation_Menu.dart';
+import 'package:mersal/widgets/drawer_menu.dart';
 
 class AboutMersal extends StatelessWidget {
   @override
@@ -26,7 +26,7 @@ class AboutMersal extends StatelessWidget {
       ),
       drawer: Container(
         width: 350,
-        child: Drawer(child: ListExtract()),
+        child: Drawer(child: DrawerMenu()),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,

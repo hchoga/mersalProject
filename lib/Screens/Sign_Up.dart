@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+
+bool isEmail(String em) {
+  String p = r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+  RegExp regExp = new RegExp(p);
+  return regExp.hasMatch(em);
+}
+
 class SignUp extends StatefulWidget {
   @override
   _SignUpState createState() => _SignUpState();
@@ -8,7 +15,7 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
 
-  bool _isLoading = false ;
+//  bool _isLoading = false ;
   Map<String, String> _registerData = {
     'name': '',
     'email': '',
@@ -17,11 +24,6 @@ class _SignUpState extends State<SignUp> {
     'city': ''
   };
   //chick for valid mails
-  bool isEmail(String em) {
-    String p = r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-    RegExp regExp = new RegExp(p);
-    return regExp.hasMatch(em);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -116,8 +118,9 @@ class _SignUpState extends State<SignUp> {
                 padding: const EdgeInsets.all(0),
                 onPressed: () {
                   if(_formKey.currentState.validate()) {
+                    Navigator.pushNamed(context, 'Mersal Home');
                     //   register(_registerData);
-                    print(_registerData);
+                    //print(_registerData);
                     //TODO: implement sign up and wrap the validation in if condition
                   }
                 },

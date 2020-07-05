@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../Screens/donation_sheet.dart' show height;
-
+import '../alert_dialog.dart';
 class AmountField extends StatefulWidget {
   double amount;
 
@@ -51,6 +51,7 @@ class _AmountFieldState extends State<AmountField> {
                 },
                 onSaved: (value) {
                   widget.amount = double.parse(value);
+                  confirmDialog(context, value);
                 },
                 keyboardType: TextInputType.number,
                 //textInputAction: TextInputAction.done,
